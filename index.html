@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Little Days — Neighborhood Life</title>
+<style>
+:root{--ink:#29352f;--muted:#758078;--cream:#f7f4e9;--paper:#fffdf6;--line:#e6e2d5;--green:#577b62;--lime:#d8e9ae;--coral:#e9876d;--gold:#e8bc5c;--shadow:0 12px 32px #26362a14}*{box-sizing:border-box}body{margin:0;background:#f3f1e8;color:var(--ink);font:14px/1.35 ui-rounded,"SF Pro Rounded",system-ui,-apple-system,Segoe UI,sans-serif}button,input,select{font:inherit}button{cursor:pointer;border:0;color:inherit}.app{min-height:100vh;display:grid;grid-template-columns:256px minmax(0,1fr) 292px;gap:15px;padding:15px;max-width:1700px;margin:auto}.panel{background:var(--paper);border:1px solid #e8e4d8;border-radius:20px;box-shadow:var(--shadow)}.left{padding:20px 16px;display:flex;flex-direction:column;gap:15px}.brand{display:flex;align-items:center;gap:10px;padding:2px 6px 12px}.brandmark{width:39px;height:39px;border-radius:14px;background:#dce9c0;display:grid;place-items:center;font-size:23px}.brand h1{font-size:20px;line-height:1;margin:0;letter-spacing:-.7px}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:4px}.section-title{font-size:10px;color:#92988e;letter-spacing:1.2px;font-weight:800;margin:3px 7px 0}.nav{display:grid;gap:6px}.nav button,.tool{width:100%;text-align:left;background:transparent;border-radius:12px;padding:11px 12px;font-weight:700;color:#667168;display:flex;align-items:center;gap:10px}.nav button.active{background:#edf2df;color:#405b43}.nav .ico{font-size:17px;width:22px;text-align:center}.profile{margin-top:auto;background:#f4f3ea;border-radius:15px;padding:13px;display:flex;gap:10px;align-items:center}.avatar{width:38px;height:38px;border-radius:13px;background:#f4cba9;display:grid;place-items:center;font-size:22px}.profile b{font-size:13px}.profile small{color:var(--muted);display:block;font-size:11px;margin-top:2px}.center{display:flex;flex-direction:column;gap:13px;min-width:0}.topbar{display:flex;align-items:center;justify-content:space-between;padding:2px 6px}.location h2{margin:0;font-size:23px;letter-spacing:-.7px}.location small{color:var(--muted)}.top-actions{display:flex;gap:8px;align-items:center}.pill{border-radius:100px;padding:8px 12px;background:var(--paper);border:1px solid var(--line);font-size:12px;font-weight:700;white-space:nowrap}.money{color:#597c4f}.canvas-wrap{position:relative;overflow:hidden;border-radius:22px;border:1px solid #e3e1d4;background:#b8d5b3;box-shadow:var(--shadow);min-height:500px;flex:1}.canvas-wrap canvas{display:block;width:100%;height:100%;min-height:500px;touch-action:none}.canvas-hud{position:absolute;left:15px;top:15px;display:flex;gap:8px;pointer-events:none}.hud-chip{padding:8px 11px;background:#fffdf2e8;backdrop-filter:blur(8px);border:1px solid #ffffff9e;border-radius:12px;font-size:11px;font-weight:750}.map-hint{position:absolute;bottom:13px;left:50%;transform:translateX(-50%);padding:8px 13px;border-radius:99px;background:#fffdf0e8;color:#606c60;font-size:11px;white-space:nowrap;pointer-events:none}.right{padding:18px 15px;display:flex;flex-direction:column;gap:14px;overflow:auto}.card{background:#fff;border:1px solid #eeece4;border-radius:16px;padding:14px}.cardhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.cardhead h3{margin:0;font-size:14px}.sub{color:var(--muted);font-size:11px}.needs{display:grid;gap:9px}.need{display:grid;grid-template-columns:65px 1fr 30px;gap:8px;align-items:center;font-size:11px;color:#69736b}.track{height:7px;background:#edf0e9;border-radius:8px;overflow:hidden}.fill{height:100%;background:#a5c481;border-radius:8px;transition:width .3s}.fill.low{background:#e89a78}.actions{display:grid;grid-template-columns:1fr 1fr;gap:7px}.action{background:#f4f5ee;border-radius:11px;padding:10px 8px;text-align:center;font-size:11px;font-weight:750;transition:.15s}.action:hover,.tool:hover{background:#eaf0dc}.action .big{display:block;font-size:19px;margin-bottom:3px}.action.primary{background:#e9f0d7;color:#466044}.tools{display:grid;gap:5px}.tool{padding:9px;font-size:12px}.tool.active{background:#e9f0d7;color:#405b43}.job-box{background:#f6f2e4;border-radius:12px;padding:11px;display:flex;gap:10px;align-items:center;font-size:12px}.job-icon{width:36px;height:36px;border-radius:12px;background:#f1ddae;display:grid;place-items:center;font-size:19px}.job-box small{display:block;color:var(--muted);font-size:10px;margin-top:2px}.catalog{display:grid;grid-template-columns:1fr 1fr;gap:7px}.item{border:1px solid #eeece5;background:#fff;border-radius:12px;padding:8px;text-align:center;font-size:10px}.item:hover{border-color:#b9c99c;background:#fafbf6}.item .furn{font-size:22px;display:block;margin-bottom:3px}.item b{font-size:10px}.item small{display:block;color:#779060;margin-top:2px}.mini-btn{padding:6px 9px;border-radius:9px;background:#edf1e4;font-size:10px;font-weight:800}.toast{position:absolute;top:15px;left:50%;transform:translate(-50%,-10px);opacity:0;pointer-events:none;transition:.25s;background:#33463b;color:white;padding:10px 16px;border-radius:99px;font-size:12px;box-shadow:var(--shadow);z-index:5;white-space:nowrap}.toast.show{opacity:1;transform:translate(-50%,0)}.modal-back{position:fixed;inset:0;background:#23332d77;backdrop-filter:blur(5px);z-index:10;display:grid;place-items:center;padding:18px;pointer-events:auto}.modal{width:min(440px,100%);background:var(--paper);border-radius:22px;padding:26px;box-shadow:0 20px 80px #18271e44}.modal h2{margin:2px 0 5px;font-size:25px;letter-spacing:-.8px}.modal p{margin:0 0 18px;color:var(--muted);font-size:13px}.formrow{margin:12px 0}.formrow label{display:block;font-size:11px;font-weight:800;color:#68736b;margin-bottom:6px}.formrow input,.formrow select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:11px;background:white;color:var(--ink)}.choice-row{display:flex;gap:8px}.choice{flex:1;padding:10px;background:white;border:1px solid var(--line);border-radius:11px;font-size:20px}.choice.sel{border-color:#9bb27c;background:#edf2df}.start-btn{width:100%;padding:13px;background:#577b62;color:white;border-radius:12px;font-weight:800;margin-top:8px}.toast-anchor{position:fixed;inset:0;pointer-events:none}.mobile-tabs{display:none}
+@media(max-width:1100px){.app{grid-template-columns:220px minmax(0,1fr);}.right{grid-column:2;display:grid;grid-template-columns:1fr 1fr;overflow:visible}.right .card:first-child{grid-row:span 2}.left{grid-row:span 2}.canvas-wrap{min-height:460px}}
+@media(max-width:720px){body{font-size:13px}.app{display:flex;flex-direction:column;padding:9px;gap:9px;min-height:100dvh}.left{display:none}.center{gap:9px}.topbar{padding:4px 3px}.location h2{font-size:19px}.top-actions{gap:5px}.pill{padding:7px 9px;font-size:10px}.canvas-wrap{min-height:48vh;max-height:58vh}.canvas-wrap canvas{min-height:48vh}.right{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0;overflow:visible}.right .card{padding:11px}.right .card:first-child{grid-column:span 2;grid-row:auto}.right .card:last-child{grid-column:span 2}.right .actions{gap:5px}.action{padding:8px 4px}.tools{grid-template-columns:1fr 1fr}.profile{display:none}.map-hint{font-size:10px;max-width:90%;overflow:hidden}.mobile-tabs{display:flex;position:sticky;bottom:6px;z-index:4;background:#fffdf3ef;backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:15px;padding:5px;justify-content:space-around;box-shadow:var(--shadow)}.mobile-tabs button{background:transparent;padding:7px 10px;font-size:10px;font-weight:800;color:#68736b}.mobile-tabs button.active{color:#466044;background:#e9f0d7;border-radius:10px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="left panel">
+  <div class="brand"><div class="brandmark">🏡</div><div><h1>little days</h1><small>make a life, make it yours</small></div></div>
+  <div class="section-title">YOUR NEIGHBORHOOD</div>
+  <nav class="nav"><button class="active" data-view="town"><span class="ico">🌿</span>Neighborhood</button><button data-view="home"><span class="ico">🛋️</span>My home</button><button data-view="build"><span class="ico">🧱</span>Build & decorate</button></nav>
+  <div class="section-title">A LITTLE LIFE</div>
+  <nav class="nav"><button data-action="work"><span class="ico">💼</span>Go to work</button><button data-action="character"><span class="ico">☺️</span>My character</button></nav>
+  <div class="profile"><div class="avatar" id="avatarMini">🙂</div><div><b id="nameMini">New neighbor</b><small id="jobMini">Finding your place</small></div></div>
+</aside>
+<main class="center">
+  <header class="topbar"><div class="location"><h2 id="viewTitle">Maplewood Lane</h2><small id="dayLabel">Monday · 8:00 AM</small></div><div class="top-actions"><div class="pill money" id="money">☼ 1,200</div><button class="pill" id="speedBtn">⏸ Pause</button></div></header>
+  <div class="canvas-wrap"><canvas id="game" aria-label="Neighborhood game map"></canvas><div class="canvas-hud"><div class="hud-chip" id="weather">☀️ Sunny day</div><div class="hud-chip" id="modeChip">🏘️ Neighborhood</div></div><div class="map-hint" id="hint">Click a home to visit · choose Build to add a home</div><div class="toast" id="toast"></div></div>
+  <div class="mobile-tabs"><button class="active" data-view="town">🌿 Town</button><button data-view="home">🛋️ Home</button><button data-view="build">🧱 Build</button><button data-action="character">☺️ Me</button></div>
+</main>
+<aside class="right panel">
+  <section class="card"><div class="cardhead"><h3>How you're feeling</h3><span class="sub" id="mood">Doing well</span></div><div class="needs" id="needs"></div></section>
+  <section class="card"><div class="cardhead"><h3>Little things to do</h3></div><div class="actions"><button class="action" data-action="eat"><span class="big">🥪</span>Grab a bite</button><button class="action" data-action="sleep"><span class="big">🛏️</span>Rest up</button><button class="action" data-action="social"><span class="big">💬</span>Say hello</button><button class="action" data-action="work"><span class="big">💼</span>Go to work</button></div></section>
+  <section class="card" id="buildCard"><div class="cardhead"><h3>Neighborhood tools</h3><span class="sub" id="toolNote">Build something</span></div><div class="tools"><button class="tool" id="buildHome">🏠 &nbsp; Build a home <span style="margin-left:auto">☼ 450</span></button><button class="tool" id="furnish">🪑 &nbsp; Place furnishings</button><button class="tool" id="enterHome">🚪 &nbsp; Enter selected home</button><button class="tool" id="townView">🗺️ &nbsp; Back to neighborhood</button></div></section>
+  <section class="card" id="catalogCard" style="display:none"><div class="cardhead"><h3>Furniture catalog</h3><span class="sub" id="catalogHint">Pick an item</span></div><div class="catalog" id="catalog"></div></section>
+  <section class="card"><div class="cardhead"><h3>Your day job</h3><button class="mini-btn" data-action="character">Change</button></div><div class="job-box"><div class="job-icon" id="jobIcon">🌱</div><div><b id="jobName">Community gardener</b><small id="jobMeta">$80 per shift · starts at 9am</small></div></div></section>
+</aside>
+</div>
+<div class="toast-anchor" id="modalRoot"></div>
+<script>
+(() => {
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const canvas=$('#game'),ctx=canvas.getContext('2d');
+const jobs=[{name:'Community gardener',icon:'🌱',pay:80,desc:'A little fresh air and $80 a shift.'},{name:'Corner café barista',icon:'☕',pay:110,desc:'Serve up smiles and earn $110 a shift.'},{name:'Library assistant',icon:'📚',pay:95,desc:'Keep stories in order for $95 a shift.'},{name:'Neighborhood artist',icon:'🎨',pay:125,desc:'Make the town brighter and earn $125.'}];
+const catalog=[{id:'sofa',name:'Sage sofa',emoji:'🛋️',cost:120,color:'#b9c99b',w:2,h:1},{id:'bed',name:'Cozy bed',emoji:'🛏️',cost:160,color:'#d9a9a0',w:2,h:1},{id:'plant',name:'Window plant',emoji:'🪴',cost:35,color:'#8aa977',w:1,h:1},{id:'table',name:'Tea table',emoji:'🪵',cost:70,color:'#c69b6b',w:1,h:1},{id:'lamp',name:'Sunshine lamp',emoji:'💡',cost:45,color:'#e6c46e',w:1,h:1},{id:'bookcase',name:'Book nook',emoji:'📚',cost:95,color:'#ba916d',w:1,h:1},{id:'chair',name:'Reading chair',emoji:'🪑',cost:65,color:'#d48d74',w:1,h:1},{id:'rug',name:'Daisy rug',emoji:'🌼',cost:55,color:'#e8d995',w:2,h:2}];
+const defaultState=()=>({started:false,name:'Milo',avatar:'🙂',job:0,money:1200,day:1,minute:8*60,paused:false,view:'town',tool:'select',selectedHome:0,homes:[{x:0,y:0,owner:true,items:[]}],needs:{energy:86,hunger:77,hygiene:82,social:69},character:{x:.5,y:.65,dest:null},lastWorkDay:0});
+let state;try{state=JSON.parse(localStorage.getItem('littledays-save'))||defaultState()}catch{state=defaultState()}
+let dpr=1,W=900,H=620,hover=null,selectedItem=null,drag=null,toastTimer;
+const save=()=>localStorage.setItem('littledays-save',JSON.stringify(state));
+function toast(msg){const el=$('#toast');el.textContent=msg;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2100)}
+function cash(n){return '☼ '+n.toLocaleString()}
+function resize(){const r=canvas.getBoundingClientRect();dpr=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;canvas.width=Math.round(W*dpr);canvas.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);draw()}
+window.addEventListener('resize',resize);
+function renderUI(){
+ $('#money').textContent=cash(state.money);$('#nameMini').textContent=state.name;$('#jobMini').textContent=jobs[state.job].name;$('#avatarMini').textContent=state.avatar;$('#jobName').textContent=jobs[state.job].name;$('#jobIcon').textContent=jobs[state.job].icon;$('#jobMeta').textContent=`$${jobs[state.job].pay} per shift · starts at 9am`;
+ const mins=state.minute%1440,hr=Math.floor(mins/60),m=mins%60,amp=hr>=12?'PM':'AM',hour=hr%12||12;$('#dayLabel').textContent=`${['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'][(state.day-1)%7]} · ${hour}:${String(m).padStart(2,'0')} ${amp}`;
+ $('#mood').textContent=Math.min(...Object.values(state.needs))>55?'Doing well':Math.min(...Object.values(state.needs))>25?'Could use a little care':'Needs some attention';
+ $('#needs').innerHTML=Object.entries({energy:'Energy',hunger:'Fullness',hygiene:'Freshness',social:'Connection'}).map(([k,label])=>`<div class="need"><span>${label}</span><div class="track"><div class="fill ${state.needs[k]<25?'low':''}" style="width:${state.needs[k]}%"></div></div><b>${Math.round(state.needs[k])}</b></div>`).join('');
+ $('#viewTitle').textContent=state.view==='home'?`${state.name}'s home`:state.view==='build'?'Build & decorate':'Maplewood Lane';
+ $('#modeChip').textContent=state.view==='home'?'🛋️ Home interior':state.tool==='build'?'🏗️ Place a home':state.tool==='furnish'?'🪑 Place furniture':'🏘️ Neighborhood';
+ $('#hint').textContent=state.view==='home'?'Choose furniture, then tap an open spot to place it · tap the door to go out':state.tool==='build'?'Tap an open grassy plot to build · homes cost ☼ 450':state.tool==='furnish'?'Choose an item from the catalog, then tap a spot inside your home':'Click a home to select it · choose Build to add a home';
+ $('#catalogCard').style.display=state.tool==='furnish'&&state.view==='home'?'block':'none';
+ $('#furnish').classList.toggle('active',state.tool==='furnish');$('#buildHome').classList.toggle('active',state.tool==='build');
+ $$('.nav button[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===state.view));$$('.mobile-tabs button[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===state.view));
+ $('#catalog').innerHTML=catalog.map(x=>`<button class="item" data-item="${x.id}"><span class="furn">${x.emoji}</span><b>${x.name}</b><small>${cash(x.cost)}</small></button>`).join('');
+ $('#catalog').querySelectorAll('[data-item]').forEach(b=>b.onclick=()=>{const item=catalog.find(i=>i.id===b.dataset.item);if(state.money<item.cost){toast('Not quite enough sunshine coins!');return}selectedItem=item;state.tool='furnish';$('#catalogHint').textContent=`${item.emoji} Tap to place`;toast(`${item.name} selected — choose a spot`);renderUI();draw()});
+}
+function roundRect(x,y,w,h,r,fill,stroke){ctx.beginPath();ctx.roundRect(x,y,w,h,r);if(fill){ctx.fillStyle=fill;ctx.fill()}if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=1;ctx.stroke()}}
+function polygon(points,fill,stroke){ctx.beginPath();points.forEach((p,i)=>i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.closePath();ctx.fillStyle=fill;ctx.fill();if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=2;ctx.stroke()}}
+function draw(){if(!ctx||!W)return;ctx.clearRect(0,0,W,H);if(state.view==='home')drawInterior();else drawTown()}
+function getLayout(){const pad=Math.max(26,W*.055),gap=Math.max(20,W*.035),cols=3,cellW=(W-pad*2-gap*(cols-1))/cols,cellH=Math.min(H*.25,150),top=H*.16;return{pad,gap,cols,cellW,cellH,top}}
+function homeRect(home){const l=getLayout(),col=home.x,row=home.y;return{x:l.pad+col*(l.cellW+l.gap),y:l.top+row*(l.cellH+l.gap),w:l.cellW,h:l.cellH}}
+const houseLooks=[{wall:'#fff0d9',roof:'#c66f58',trim:'#f9dfad'},{wall:'#e4edda',roof:'#738e6e',trim:'#cad9ad'},{wall:'#f6dce0',roof:'#bd7a86',trim:'#f2bfb2'},{wall:'#e2e8f4',roof:'#7688aa',trim:'#b9c8dd'}];
+function drawTown(){
+ ctx.fillStyle='#b9d6b1';ctx.fillRect(0,0,W,H);
+ // soft rolling lawns
+ for(let i=0;i<8;i++){ctx.fillStyle=i%2?'#b4d2ab':'#c3d9b6';ctx.beginPath();ctx.ellipse((i*177+30)%W,H*.15+(i%3)*100,140,75,0,0,Math.PI*2);ctx.fill()}
+ // walking paths
+ ctx.fillStyle='#e7d9b9';ctx.fillRect(0,H*.48,W,H*.115);ctx.fillRect(W*.31,0,W*.09,H);ctx.fillRect(W*.68,0,W*.075,H);
+ ctx.fillStyle='#f0e5ca';ctx.fillRect(0,H*.51,W,H*.035);ctx.fillRect(W*.34,0,W*.025,H);ctx.fillRect(W*.71,0,W*.02,H);
+ // plaza and planted spots
+ ctx.fillStyle='#ddcba8';ctx.beginPath();ctx.ellipse(W*.52,H*.535,W*.11,H*.095,0,0,Math.PI*2);ctx.fill();ctx.fillStyle='#8fae73';ctx.beginPath();ctx.arc(W*.52,H*.535,Math.min(W,H)*.035,0,Math.PI*2);ctx.fill();ctx.fillStyle='#f3df9e';ctx.beginPath();ctx.arc(W*.52,H*.535,Math.min(W,H)*.022,0,Math.PI*2);ctx.fill();
+ // trees and flower patches
+ for(let i=0;i<16;i++){const x=((i*137+59)%(W-30))+15,y=((i*89+70)%(H-70))+42;if(y>H*.46&&y<H*.62)continue;drawTree(x,y, i%3)}
+ const l=getLayout();
+ for(let row=0;row<2;row++)for(let col=0;col<3;col++){const x=l.pad+col*(l.cellW+l.gap),y=l.top+row*(l.cellH+l.gap),home=state.homes.find(h=>h.x===col&&h.y===row);drawPlot(x,y,l.cellW,l.cellH,!!home,home)}
+ // shops and community building
+ drawShop(W*.09,H*.82,W*.16,H*.14,'☕','PIP & BEAN','#d7996d');drawShop(W*.75,H*.82,W*.16,H*.14,'📚','LITTLE LIBRARY','#8da6b6');
+ // avatar on path
+ const px=state.character.x*W,py=state.character.y*H;drawPerson(px,py,state.avatar,'#45634c',1);
+}
+function drawPlot(x,y,w,h,occupied,home){
+ // plot shadow and lawn
+ roundRect(x,y,w,h,18,occupied?'#a9c99c':'#bad7aa',occupied?'#9dbd91':'#a8c99a');
+ if(!occupied){ctx.strokeStyle='#d5e6bf';ctx.setLineDash([6,5]);ctx.lineWidth=1.5;roundRect(x+8,y+8,w-16,h-16,15,null,'#d7e5c4');ctx.setLineDash([]);ctx.font=`${Math.max(11,w*.075)}px system-ui`;ctx.textAlign='center';ctx.fillStyle='#6c8c68';ctx.fillText('OPEN PLOT',x+w/2,y+h/2+4);ctx.font=`${Math.max(10,w*.07)}px system-ui`;ctx.fillStyle='#809a75';ctx.fillText('Build here · ☼450',x+w/2,y+h/2+22);return}
+ const index=state.homes.indexOf(home),style=houseLooks[(index+1)%houseLooks.length],selected=state.selectedHome===index;
+ // lawn details
+ for(let i=0;i<4;i++){ctx.fillStyle=i%2?'#91b782':'#9bbc8c';ctx.beginPath();ctx.arc(x+14+(i*49)%(w-20),y+h-14-(i%2)*5,3,0,Math.PI*2);ctx.fill()}
+ // house shadow
+ roundRect(x+w*.16,y+h*.32,w*.7,h*.52,6,'#82a67d');
+ // body and roof
+ roundRect(x+w*.18,y+h*.28,w*.64,h*.5,5,style.wall,selected?'#fff5cf':'#fff8e9');
+ polygon([[x+w*.12,y+h*.34],[x+w*.5,y+h*.03],[x+w*.87,y+h*.34]],style.roof,'#765d4f');
+ // roof accent line
+ ctx.strokeStyle='#ffffff55';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(x+w*.25,y+h*.31);ctx.lineTo(x+w*.5,y+h*.11);ctx.lineTo(x+w*.75,y+h*.31);ctx.stroke();
+ // windows
+ for(const wx of [.3,.64]){roundRect(x+w*wx,y+h*.43,w*.13,h*.15,4,'#a9d8d5','#fff9ec');ctx.strokeStyle='#ffffff';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(x+w*(wx+.065),y+h*.43);ctx.lineTo(x+w*(wx+.065),y+h*.58);ctx.moveTo(x+w*wx,y+h*.505);ctx.lineTo(x+w*(wx+.13),y+h*.505);ctx.stroke()}
+ // door
+ roundRect(x+w*.45,y+h*.53,w*.11,h*.25,4,'#b17b56','#f5d6a5');ctx.fillStyle='#f5d993';ctx.beginPath();ctx.arc(x+w*.535,y+h*.66,2,0,Math.PI*2);ctx.fill();
+ // garden and name tag
+ ctx.fillStyle='#557d51';ctx.font=`${Math.max(10,w*.065)}px system-ui`;ctx.textAlign='center';ctx.fillText(home.owner?`${state.name}'s home`:'A neighbor’s home',x+w/2,y+h*.94);
+ if(selected){ctx.strokeStyle='#fff4bc';ctx.lineWidth=3;roundRect(x+2,y+2,w-4,h-4,17,null,'#fff4bc')}
+}
+function drawTree(x,y,variant=0){const s=Math.max(13,Math.min(W,H)*.028);ctx.fillStyle='#8b7659';roundRect(x-s*.13,y+s*.12,s*.26,s*.62,4,'#9b7955');const greens=['#6f9c6a','#7eaa71','#5f8c63'];ctx.fillStyle=greens[variant%3];ctx.beginPath();ctx.arc(x,y,s*.74,0,Math.PI*2);ctx.fill();ctx.beginPath();ctx.arc(x-s*.43,y+s*.12,s*.49,0,Math.PI*2);ctx.fill();ctx.beginPath();ctx.arc(x+s*.4,y+s*.1,s*.48,0,Math.PI*2);ctx.fill();ctx.fillStyle='#a5c582';ctx.beginPath();ctx.arc(x-s*.2,y-s*.22,s*.18,0,Math.PI*2);ctx.fill()}
+function drawShop(x,y,w,h,icon,label,color){roundRect(x,y+5,w,h,10,'#b5b59a');roundRect(x,y,w,h-8,10,'#f9ebd3','#fbf7e9');polygon([[x-5,y+20],[x+w/2,y-14],[x+w+5,y+20]],color,'#9b7354');ctx.font=`${Math.max(19,w*.2)}px system-ui`;ctx.textAlign='center';ctx.fillText(icon,x+w/2,y+h*.57);ctx.fillStyle='#6c6358';ctx.font=`bold ${Math.max(8,w*.075)}px system-ui`;ctx.fillText(label,x+w/2,y+h*.86)}
+function drawPerson(x,y,emoji,shirt='#45634c',scale=1){ctx.fillStyle='#61745355';ctx.beginPath();ctx.ellipse(x,y+8*scale,9*scale,4*scale,0,0,Math.PI*2);ctx.fill();ctx.fillStyle=shirt;roundRect(x-6*scale,y-7*scale,12*scale,17*scale,5*scale,shirt);ctx.fillStyle='#e9b18f';ctx.beginPath();ctx.arc(x,y-12*scale,7*scale,0,Math.PI*2);ctx.fill();ctx.textAlign='center';ctx.font=`${14*scale}px system-ui`;ctx.fillText(emoji,x,y-9*scale)}
+function drawInterior(){
+ const g=ctx.createLinearGradient(0,0,W,H);g.addColorStop(0,'#f3e7d4');g.addColorStop(1,'#e6d9c5');ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+ // room boards
+ ctx.fillStyle='#d5b999';ctx.fillRect(0,H*.68,W,H*.32);ctx.strokeStyle='#c8ad8f';ctx.lineWidth=1;for(let y=H*.69;y<H;y+=25){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke()}for(let x=45;x<W;x+=105){ctx.beginPath();ctx.moveTo(x,H*.68);ctx.lineTo(x,H);ctx.stroke()}
+ // walls and wallpaper
+ ctx.fillStyle='#fbf4e8';ctx.fillRect(0,0,W,H*.68);ctx.fillStyle='#e4cbb0';ctx.fillRect(0,H*.65,W,H*.045);ctx.fillStyle='#cba982';ctx.fillRect(0,H*.68,W,7);
+ for(let x=22;x<W;x+=47)for(let y=20;y<H*.63;y+=41){ctx.fillStyle='#eadbc8';ctx.beginPath();ctx.arc(x,y,1.3,0,Math.PI*2);ctx.fill()}
+ // window
+ roundRect(W*.12,H*.1,W*.22,H*.29,8,'#a9d8d6','#fff');ctx.strokeStyle='#fff';ctx.lineWidth=7;ctx.beginPath();ctx.moveTo(W*.23,H*.1);ctx.lineTo(W*.23,H*.39);ctx.moveTo(W*.12,H*.245);ctx.lineTo(W*.34,H*.245);ctx.stroke();ctx.fillStyle='#d3e2be';ctx.fillRect(W*.12,H*.36,W*.22,H*.04);
+ // door
+ roundRect(W*.81,H*.27,W*.13,H*.4,7,'#a97550','#f3d9b8');ctx.fillStyle='#f6d991';ctx.beginPath();ctx.arc(W*.91,H*.48,3,0,Math.PI*2);ctx.fill();ctx.fillStyle='#c2a883';ctx.fillRect(W*.78,H*.665,W*.19,7);
+ // area rug
+ ctx.fillStyle='#e7d995';ctx.beginPath();ctx.ellipse(W*.52,H*.79,W*.25,H*.15,0,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#fbf0c1';ctx.lineWidth=3;ctx.beginPath();ctx.ellipse(W*.52,H*.79,W*.22,H*.125,0,0,Math.PI*2);ctx.stroke();
+ const home=state.homes[state.selectedHome]||state.homes[0];
+ home.items.forEach((f,i)=>{const x=f.x*W,y=f.y*H;ctx.fillStyle=f.color;roundRect(x-W*.06,y-H*.045,W*.12,H*.09,9,f.color,'#ffffffaa');ctx.font=`${Math.max(20,Math.min(W,H)*.055)}px system-ui`;ctx.textAlign='center';ctx.fillText(f.emoji,x,y+7);ctx.fillStyle='#fff9';roundRect(x-W*.06,y+H*.027,W*.12,5,3,'#fff9')});
+ // character inside
+ const p=state.character;drawPerson(p.x*W,p.y*H,state.avatar,'#45634c',1.25);
+ if(state.tool==='furnish'&&selectedItem&&hover){ctx.globalAlpha=.58;ctx.fillStyle=selectedItem.color;roundRect(hover.x-W*.06,hover.y-H*.045,W*.12,H*.09,9,selectedItem.color);ctx.font=`${Math.max(20,Math.min(W,H)*.055)}px system-ui`;ctx.textAlign='center';ctx.fillText(selectedItem.emoji,hover.x,hover.y+7);ctx.globalAlpha=1}
+ ctx.fillStyle='#857d6c';ctx.font='12px system-ui';ctx.textAlign='left';ctx.fillText('SUNROOM   ·   A LITTLE PLACE TO CALL YOURS',20,24);
+}
+function coords(e){const r=canvas.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}}
+function nearestHome(x,y){for(let i=0;i<state.homes.length;i++){const r=homeRect(state.homes[i]);if(x>=r.x&&x<=r.x+r.w&&y>=r.y&&y<=r.y+r.h)return i}return -1}
+function openView(view){state.view=view;state.tool=view==='build'?'build':'select';selectedItem=null;renderUI();draw();save()}
+function doAction(action){switch(action){case'eat':state.needs.hunger=Math.min(100,state.needs.hunger+38);state.money=Math.max(0,state.money-8);toast('A tasty little snack! −8 coins');break;case'sleep':state.needs.energy=Math.min(100,state.needs.energy+52);state.minute+=120;toast('A lovely rest. Feeling refreshed!');break;case'social':state.needs.social=Math.min(100,state.needs.social+32);state.needs.hunger=Math.max(0,state.needs.hunger-3);toast('A friendly chat brightened your day!');break;case'work':if(state.day===state.lastWorkDay){toast('You already worked a shift today. Time to unwind!');break}if(state.minute%1440<9*60){toast('Your shift starts at 9am — enjoy the morning!');break}state.money+=jobs[state.job].pay;state.lastWorkDay=state.day;state.needs.energy=Math.max(0,state.needs.energy-16);state.needs.hunger=Math.max(0,state.needs.hunger-12);state.needs.social=Math.max(0,state.needs.social-5);state.minute+=240;toast(`Shift complete! You earned ☼${jobs[state.job].pay}.`);break;case'character':characterModal();return}state.needs.hygiene=Math.max(0,state.needs.hygiene-2);renderUI();draw();save()}
+function characterModal(){const root=$('#modalRoot');root.innerHTML=`<div class="modal-back"><div class="modal"><h2>Make yourself at home</h2><p>Your little life starts with you. Pick a look, a name, and a job.</p><div class="formrow"><label>YOUR NAME</label><input id="charName" maxlength="18" value="${state.name}"></div><div class="formrow"><label>CHOOSE YOUR LOOK</label><div class="choice-row">${['🙂','😊','😎','🤓','🥰','😌'].map(e=>`<button class="choice ${e===state.avatar?'sel':''}" data-avatar="${e}">${e}</button>`).join('')}</div></div><div class="formrow"><label>YOUR DAY JOB</label><select id="charJob">${jobs.map((j,i)=>`<option value="${i}" ${state.job===i?'selected':''}>${j.icon} ${j.name} — ☼${j.pay}/shift</option>`).join('')}</select></div><button class="start-btn" id="saveCharacter">Save my little life</button></div></div>`;
+ root.querySelectorAll('[data-avatar]').forEach(b=>b.onclick=()=>{root.querySelectorAll('.choice').forEach(x=>x.classList.remove('sel'));b.classList.add('sel')});root.querySelector('.modal-back').onclick=e=>{if(e.target.classList.contains('modal-back'))root.innerHTML=''};$('#saveCharacter').onclick=()=>{state.name=$('#charName').value.trim()||'Neighbor';state.job=Number($('#charJob').value);state.avatar=root.querySelector('.choice.sel')?.dataset.avatar||'🙂';state.started=true;root.innerHTML='';renderUI();draw();save();toast(`Welcome home, ${state.name}!`)};
+}
+function initialModal(){if(!state.started)characterModal()}
+function buildHomeAt(index){const l=getLayout(),cell=homeRect({x:index%3,y:Math.floor(index/3)});if(state.homes.length>=6){toast('Every plot is full — what a lovely neighborhood!');return}if(state.money<450){toast('You need ☼450 to build a new home.');return}if(state.homes.some(h=>h.x===index%3&&h.y===Math.floor(index/3))){toast('That plot already has a home!');return}state.money-=450;state.homes.push({x:index%3,y:Math.floor(index/3),owner:false,items:[]});state.selectedHome=state.homes.length-1;state.tool='select';state.view='town';toast('A new neighbor moved in! −☼450');renderUI();draw();save()}
+canvas.addEventListener('pointermove',e=>{hover=coords(e);if(drag){state.character.x=Math.max(.04,Math.min(.96,hover.x/W));state.character.y=Math.max(.1,Math.min(.94,hover.y/H));draw()}else draw()});
+canvas.addEventListener('pointerup',e=>{if(drag){drag=null;save();return}const p=coords(e);if(state.view==='home'){
+ if(p.x>W*.79&&p.y>H*.24&&p.y<H*.72){openView('town');return}
+ if(state.tool==='furnish'&&selectedItem){const item=selectedItem;state.money-=item.cost;const home=state.homes[state.selectedHome];home.items.push({id:item.id,emoji:item.emoji,color:item.color,x:Math.max(.09,Math.min(.72,p.x/W)),y:Math.max(.46,Math.min(.9,p.y/H))});selectedItem=null;state.tool='select';toast(`${item.name} placed!`);renderUI();draw();save();return}
+ state.character.dest={x:p.x/W,y:p.y/H};draw();return}
+ const hit=nearestHome(p.x,p.y);if(state.tool==='build'){const l=getLayout();let plot=-1;for(let row=0;row<2;row++)for(let col=0;col<3;col++){const r=homeRect({x:col,y:row});if(p.x>=r.x&&p.x<=r.x+r.w&&p.y>=r.y&&p.y<=r.y+r.h)plot=row*3+col}if(plot>=0)buildHomeAt(plot);return}
+ if(hit>=0){state.selectedHome=hit;if(state.homes[hit].owner){openView('home')}else{state.character.dest={x:p.x/W,y:p.y/H};toast('A friendly neighbor lives here! Say hello to brighten your day.');state.needs.social=Math.min(100,state.needs.social+8);renderUI();draw();save()}return}
+ state.character.dest={x:p.x/W,y:p.y/H};state.needs.energy=Math.max(0,state.needs.energy-.3);draw();
+});
+canvas.addEventListener('pointerdown',e=>{if(state.view!=='home')return;const p=coords(e),cx=state.character.x*W,cy=state.character.y*H;if(Math.hypot(p.x-cx,p.y-cy)<30){drag=true;canvas.setPointerCapture(e.pointerId)}});
+$$('[data-view]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.view==='home'&&!state.homes[state.selectedHome]?.owner){state.selectedHome=0}openView(b.dataset.view)}));
+$$('[data-action]').forEach(b=>b.addEventListener('click',()=>doAction(b.dataset.action)));
+$('#buildHome').onclick=()=>{state.view='town';state.tool='build';selectedItem=null;renderUI();draw();toast('Choose any open plot to build your next home')};
+$('#furnish').onclick=()=>{if(state.view!=='home'){state.view='home';state.selectedHome=state.homes.findIndex(h=>h.owner);if(state.selectedHome<0)state.selectedHome=0}state.tool='furnish';selectedItem=null;renderUI();draw();$('#catalogHint').textContent='Pick an item'};
+$('#enterHome').onclick=()=>openView('home');$('#townView').onclick=()=>openView('town');
+$('#speedBtn').onclick=()=>{state.paused=!state.paused;$('#speedBtn').textContent=state.paused?'▶ Play':'⏸ Pause';save()};
+setInterval(()=>{if(state.paused)return;state.minute+=5;if(state.minute>=1440){state.minute=0;state.day++;state.lastWorkDay=0;toast('A brand new day in Maplewood!')}if(state.minute%60===0){state.needs.hunger=Math.max(0,state.needs.hunger-.8);state.needs.energy=Math.max(0,state.needs.energy-.45);state.needs.hygiene=Math.max(0,state.needs.hygiene-.25);state.needs.social=Math.max(0,state.needs.social-.2)}if(state.character.dest){const dx=state.character.dest.x-state.character.x,dy=state.character.dest.y-state.character.y,dist=Math.hypot(dx,dy);if(dist<.012)state.character.dest=null;else{state.character.x+=dx/dist*.008;state.character.y+=dy/dist*.008}}renderUI();draw();save()},1800);
+renderUI();resize();initialModal();
+})();
+</script>
+</body>
+</html>
